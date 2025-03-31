@@ -61,9 +61,7 @@ button {
     text-align: center;
 }
 
-img[alt="Radar for Huntsville"] {
-    width: 100%;
-    max-width: 600px;
+#map {
     border: 1px solid #ccc;
 }
 
