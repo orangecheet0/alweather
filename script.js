@@ -1,7 +1,7 @@
 const defaultCity = 'Huntsville';
 const radarStation = 'KHUN';  // Huntsville radar station
-const userAgent = 'MyWeatherApp (your@email.com)';  // Replace with your email
-const openCageApiKey = 'YOUR_OPENCAGE_API_KEY';  // Replace with your OpenCage API key
+const userAgent = 'MyWeatherApp (ben.f.shults@gmail.com)';  // Replace with your email
+const openCageApiKey = '35fab0f732074dea8fce792e7dc8c090';  // Replace with your OpenCage API key
 
 document.addEventListener('DOMContentLoaded', () => {
     getWeather(defaultCity);
