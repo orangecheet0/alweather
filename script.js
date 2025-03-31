@@ -72,3 +72,7 @@ function displayForecast(data) {
         `;
     });
 }
+setInterval(function() {
+    var img = document.querySelector('img[alt="Radar for Huntsville"]');
+    img.src = img.src.split('?')[0] + '?' + new Date().getTime();
+}, 300000); // Refresh every 5 minutes
