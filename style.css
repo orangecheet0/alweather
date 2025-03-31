@@ -63,3 +63,8 @@ button {
         align-items: center;
     }
 }
+img[alt="Radar for Huntsville"] {
+    width: 100%; /* Adjusts to container width */
+    max-width: 600px; /* Limits maximum size */
+    border: 1px solid #ccc; /* Optional: adds a border */
+}
