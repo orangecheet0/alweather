@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
+    <title>Alabama Weather</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Alabama Weather</h1>
     </header>
     <main>
-        <p>This is my first site hosted on GitHub Pages. Pretty cool, right?</p>
+        <section id="introduction">
+            <h2>Welcome to Alabama Weather</h2>
+            <p>Alabama has a subtropical climate, with hot, humid summers and mild winters. North Alabama, in particular, experiences a mix of weather patterns due to its location. From scorching summers to the occasional snowfall, the weather here is always interesting. This site provides real-time weather updates and forecasts for cities in North Alabama and beyond.</p>
+        </section>
+        <section id="weather">
+            <h2>Current Weather</h2>
+            <form id="weather-form">
+                <input type="text" id="city-input" placeholder="Enter a city">
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="current-weather">
+                <!-- Weather data will be inserted here -->
+            </div>
+            <h2>5-Day Forecast</h2>
+            <div id="forecast">
+                <!-- Forecast cards will be inserted here -->
+            </div>
+        </section>
     </main>
     <footer>
-        <p>Built by OrangeCheeto - 2025</p>
+        <p>Data provided by <a href="https://openweathermap.org">OpenWeatherMap</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
