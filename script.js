@@ -1,11 +1,11 @@
 const defaultCity = 'Huntsville';
 const userAgent = 'MyWeatherApp (ben.f.shults@gmail.com)';  // Replace with your email
-const openCageApiKey = '35fab0f732074dea8fce792e7dc8c090';  // Replace with your OpenCage API key
-const openWeatherMapApiKey = 'd9df002e51ecf37f962de05a38c58dcf';  // Replace with your OpenWeatherMap API key
+const openCageApiKey = '35fab0f732074dea8fce792e7dc8c090';    // Replace with your OpenCage API key
 
 document.addEventListener('DOMContentLoaded', () => {
     getWeather(defaultCity);
-    initMap();
+    refreshRadar();
+    setInterval(refreshRadar, 300000);  // Refresh every 5 minutes
 });
 
 const form = document.getElementById('weather-form');
@@ -70,17 +70,7 @@ async function getLatLon(city) {
     return { lat, lon: lng };
 }
 
-function initMap() {
-    // Initialize the map centered on North Alabama (Huntsville)
-    var map = L.map('map').setView([34.7304, -86.5861], 7);
-
-    // Add OpenStreetMap base layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Add OpenWeatherMap precipitation layer
-    L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${d9df002e51ecf37f962de05a38c58dcf}`, {
-        attribution: 'Map data &copy; <a href="https://openweathermap.org">OpenWeatherMap</a>'
-    }).addTo(map);
+function refreshRadar() {
+    const img = document.getElementById('radar-image');
+    img.src = `https://radar.weather.gov/ridge/standard/KHUN_loop.gif?${new Date().getTime()}`;
 }
