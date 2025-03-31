@@ -72,5 +72,5 @@ async function getLatLon(city) {
 
 function refreshRadar() {
     const img = document.getElementById('radar-image');
-    img.src = `https://radar.weather.gov/ridge/standard/KHTX_loop.gif${new Date().getTime()}`;
+    img.src = `https://radar.weather.gov/ridge/standard/KHTX_loop.gif?${new Date().getTime()}`;
 }
